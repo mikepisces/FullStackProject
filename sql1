@@ -1,0 +1,51 @@
+CREATE TABLE
+    user
+    (
+        id BIGINT NOT NULL,
+        name VARCHAR,
+        password VARCHAR,
+        type VARCHAR,
+        PRIMARY KEY (id)
+    );
+
+CREATE TABLE
+    flavour
+    (
+        id BIGINT NOT NULL,
+		name VARCHAR,
+		price DOUBLE,
+		PRIMARY KEY (id)
+    );
+	
+CREATE TABLE
+	ingredient
+	(
+		id BIGINT NOT NULL,
+		name VARCHAR,
+		price DOUBLE,
+		PRIMARY KEY (id)
+	);
+	
+CREATE TABLE
+    hibernate_sequence
+    (
+        next_val BIGINT
+    );
+
+INSERT INTO user (id,name, password, type)
+  VALUES (1, 'Mike','mike123','admin');
+INSERT INTO user (id,name, password, type)
+  VALUES (2, 'Sagar', 'sagar123', 'user');
+  
+ INSERT INTO flavour (id,name, price)
+  VALUES (1,"Mocha kuka",50.0);
+INSERT INTO flavour (id,name, price)
+  VALUES (2,"Cappuchino",100.25);
+
+INSERT INTO ingredient (id,name, price)
+  VALUES (1,"Extra sugar",10.0);
+INSERT INTO ingredient  (id,name, price)
+  VALUES (2,"Extra milk",15.25);
+
+
+INSERT INTO hibernate_sequence (next_val) VALUES (3);
